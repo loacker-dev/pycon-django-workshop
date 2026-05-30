@@ -55,7 +55,7 @@
         }
 
         time::before {
-            content: "[date] ";
+            content: "";
         }
 
         h2 a {
@@ -94,11 +94,11 @@
     <main>
         {% for post in posts %}
             <article>
-                <time datetime="{{ post.published_date|date:'Y-m-d H:i' }}">
-                    {{ post.published_date|date:"d.m.Y, H:i" }}
+                <time>
+                    published: {{ post.published_date }}
                 </time>
                 <h2>
-                    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+                    <a href="">{{ post.title }}</a>
                 </h2>
                 <p>{{ post.text|linebreaksbr }}</p>
             </article>
