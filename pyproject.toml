@@ -1,0 +1,12 @@
+[project]
+name = "djangogirls"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "django~=5.2.12",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.0",
+]
